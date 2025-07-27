@@ -28,7 +28,7 @@ body {
   font-family: iransansnum;
 }
 /* صفحه ورود */
-.body{
+.body {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -37,7 +37,7 @@ body {
 }
 .log {
   width: 70%;
-  height: auto;  
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -48,11 +48,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  img{
+  img {
     width: 300px;
   }
 }
-.form{
+.form {
   width: 500px;
   height: 400px;
   background-color: var(--green-d2);
@@ -61,10 +61,10 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
   direction: rtl;
 }
-.tv{
+.tv {
   width: 90%;
   height: auto;
   display: flex;
@@ -72,7 +72,9 @@ body {
   justify-content: start;
   gap: 10px;
   color: white;
-  p{
+  margin-bottom: 20px;
+  cursor: default;
+  .a {
     width: 15%;
     height: auto;
     color: white;
@@ -82,4 +84,147 @@ body {
     font-size: 20px;
     border-left: 1px solid var(--white);
   }
+}
+.user {
+  width: 90%;
+  height: 40px;
+  background-color: var(--green-d1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
+  padding: 10px;
+  i {
+    color: var(--white);
+  }
+  input {
+    width: 90%;
+    height: auto;
+    padding: 5px;
+    color: none;
+    background-color: var(--green-d1);
+    border: none;
+    color: var(--white);
+  }
+  button {
+    width: 100%;
+    height: 100%;
+    color: var(--green-d2);
+    background-color: var(--green-l);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+input:focus {
+  outline: none;
+}
+.boxed {
+  width: 90%;
+  height: 50px;
+  background-color: var(--green-d1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-right: 10px;
+  color: var(--white);
+  user-select: none;
+  p {
+    margin: auto;
+  }
+}
+.b {
+  width: 25px;
+  height: 25px;
+  background-color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green-d2);
+  cursor: pointer;
+}
+/* هدر لپتاپ */
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: var(--green-l); */
+  direction: rtl;
+}
+.logo {
+  width: 15%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  a {
+    width: 100%;
+    height: 100%;
+  }
+  img {
+    width: auto;
+    height: 100%;
+  }
+}
+.menu {
+  width: 30%;
+  height: 60%;
+  background-color: var(--green-d2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.zmenu {
+  width: auto;
+  height: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: var(--green-l);
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.zmenu:hover {
+  color: var(--white);
+}
+.zmenu1 {
+  background-color: var(--green-d1);
+  border-radius: 10px;
+  color: var(--white);
+}
+.exit {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.c {
+  width: 50px;
+  height: 50px;
+  background-color: var(--green-d2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  i {
+    color: var(--green-l);
+    font-size: large;
+  }
+}
+a {
+  color: none;
+  text-decoration: none;
 }

@@ -2,34 +2,58 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>verano </title>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/l.css">
-    <link rel="stylesheet" href="./css/ph.css">
-    <link rel="stylesheet" href="./css/t.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>verano | ورود</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/l.css">
+  <link rel="stylesheet" href="./css/ph.css">
+  <link rel="stylesheet" href="./css/t.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
-    <!-- ورود -->
-    <div class="body">
-        <div class="log">
-            <div class="log-logo">
-                <img src="./media/logo.png" alt="">
-            </div>
-            <div class="form">
-                <div class="tv">
-                    <p>ورود</p>
-                    نام کاربری و رمز عبور را وارد کنید
-                </div>
-                <div class="user">
-                    
-                </div>
-            </div>
+  <!-- ورود -->
+  <div class="body">
+    <div class="log">
+      <div class="log-logo">
+        <img src="./media/logo.png" alt="">
+      </div>
+      <div class="form">
+        <div class="tv">
+          <p class="a">ورود</p>
+          <p id="infoMessage">نام کاربری و رمز عبور را وارد کنید</p>
         </div>
+
+        <div class="user">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="username" placeholder="نام کاربری" />
+        </div>
+
+        <div class="user">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="password" placeholder="رمز عبور" />
+        </div>
+
+        <div class="boxed">
+          <div class="b" id="refreshCaptcha" title="رفرش کپچا">
+            <i class="fa-solid fa-rotate"></i>
+          </div>
+          <p id="captchaText">12345</p>
+        </div>
+
+        <div class="user">
+          <i class="fa-solid fa-shield-halved"></i>
+          <input type="text" id="captchaInput" placeholder="کد کپچا" />
+        </div>
+
+        <div class="user" style="padding: 0;">
+          <button id="loginBtn">ورود</button>
+        </div>
+      </div>
     </div>
+  </div>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

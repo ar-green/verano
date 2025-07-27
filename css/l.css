@@ -1,7 +1,14 @@
+:root {
+  --green: #055432;
+  --green-l: #a9d89b;
+  --green-d1: hsl(149, 85%, 13%);
+  --green-d2: #001c0d;
+  --white: #efffdb;
+}
 @media (min-width: 1024px) {
-    .log-logo{
-    img{
-        width: 350px;
+  .log-logo {
+    img {
+      width: 350px;
     }
   }
 }
