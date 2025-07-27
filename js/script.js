@@ -1,5 +1,5 @@
 // نام‌های کاربری و رمز عبور معتبر
-const validUsernames = ["arnoosh", "mahdis", "dorsa"];
+const validUsernames = ["arnoosh", "mahdis", "mahdisa", "liosa", "dorsa"];
 const validPassword = "bts";
 
 // تولید کپچا ۵ رقمی رندوم
@@ -67,5 +67,5 @@ loginBtn.addEventListener("click", () => {
 
   setTimeout(() => {
     window.location.href = "verano.html";
-  }, 2000);
+  }, 1000);
 });
