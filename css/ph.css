@@ -1,0 +1,17 @@
+@media (max-width: 767px) {
+  .log {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-direction: column;
+  } 
+  .form{
+    width: 100%;
+  }
+  .log-logo{
+    img{
+        width: 300px;
+    }
+  }
+}

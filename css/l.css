@@ -1,0 +1,7 @@
+@media (min-width: 1024px) {
+    .log-logo{
+    img{
+        width: 350px;
+    }
+  }
+}

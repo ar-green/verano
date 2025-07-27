@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @font-face {
   font-family: iransansmedium;
   src: url(../media/font/medium.woff);
@@ -10,11 +9,12 @@
 :root {
   --green: #055432;
   --green-l: #a9d89b;
-  --green-d: #053c20;
+  --green-d1: hsl(149, 85%, 13%);
+  --green-d2: #001c0d;
   --white: #efffdb;
 }
 body {
-  background-color: var(--green-d);
+  background-color: var(--green-d1);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -27,33 +27,59 @@ body {
   font-family: iransansmedium;
   font-family: iransansnum;
 }
-=======
-@font-face {
-  font-family: iransansmedium;
-  src: url(../media/font/font/medium.woff);
-}
-@font-face {
-  font-family: iransansnum;
-  src: url(../media/font/font/mediumnum.ttf);
-}
-:root {
-  --green: #055432;
-  --green-l: #a9d89b;
-  --green-d: #053c20;
-  --white: #efffdb;
-}
-body {
-  background-color: green;
+/* صفحه ورود */
+.body{
+  width: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+.log {
+  width: 70%;
+  height: auto;  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.log-logo {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img{
+    width: 300px;
+  }
+}
+.form{
+  width: 500px;
+  height: 400px;
+  background-color: var(--green-d2);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  transition: 300ms all linear;
+  gap: 5px;
+  direction: rtl;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: iransansmedium;
-  font-family: iransansnum;
+.tv{
+  width: 90%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  color: white;
+  p{
+    width: 15%;
+    height: auto;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 20px;
+    border-left: 1px solid var(--white);
+  }
 }
->>>>>>> 9fea2bac711e8b86bbfb87f62589f6170c31de38

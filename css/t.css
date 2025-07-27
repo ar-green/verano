@@ -1,0 +1,13 @@
+@media (min-width: 768px) and (max-width: 1023px) {
+  .log {
+    width: 85%;
+  } 
+  .log-logo{
+    img{
+        width: 280px;
+    }
+  }
+  .form{
+    width: 400px;
+  }
+}
