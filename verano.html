@@ -2,36 +2,115 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>verano | ورانو</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/l.css">
-    <link rel="stylesheet" href="./css/ph.css">
-    <link rel="stylesheet" href="./css/t.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>verano | ورانو</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/l.css">
+  <link rel="stylesheet" href="./css/ph.css">
+  <link rel="stylesheet" href="./css/t.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
-    <div class="header">
-        <div class="logo"><a href="./verano.html"><img src="./media/logo.png" alt=""></a></div>
+  <div class="header">
+    <div class="logo"><a href="./verano.html"><img src="./media/logo.png" alt=""></a></div>
 
-        <div class="menu">
-            <div class="zmenu1 zmenu">
-                <i class="fa-solid fa-home" style="margin-bottom: 4px;"></i> خانه
-            </div>
-            <div class="zmenu">
-                <i class="fa-regular fa-folder-open"></i> آرشیو لایو ها
-            </div>
-            <div class="zmenu">
-                <i class="fa-regular fa-calendar"></i> تاریخ تولد
-            </div>
-        </div>
-        <div class="exit">
-            <a href="index.html" class="c"><i class="fa-solid fa-arrow-right-from-bracket fa-flip-horizontal"></i></a>
-        </div>
+    <div class="menu">
+      <div class="zmenu1 zmenu">
+        <i class="fa-solid fa-home" style="margin-bottom: 4px;"></i> خانه
+      </div>
+      <div class="zmenu">
+        <i class="fa-regular fa-folder-open"></i> آرشیو لایو ها
+      </div>
+      <div class="zmenu">
+        <i class="fa-regular fa-calendar"></i> تاریخ تولد
+      </div>
     </div>
-    <script src="./js/script.js"></script>
+    <div class="exit">
+      <a href="index.html" class="c"><i class="fa-solid fa-arrow-right-from-bracket fa-flip-horizontal"></i></a>
+    </div>
+  </div>
+  <!-- صفحه اصلی -->
+  <div class="home">
+    <div class="box">
+      <div class="banner"></div>
+      <div class="border">
+        <div class="t">آخرین لایو ها</div>
+        <div class="end" id="end-container">
+        </div>
+
+      </div>
+    </div>
+  <script>
+    fetch("./api/live.json")
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById("end-container");
+    container.innerHTML = ""; // پاک کردن محتوا
+    const lastTen = data.slice(-10).reverse();  
+
+    lastTen.forEach(item => {
+      const div = document.createElement("div");
+      div.className = "ending";
+      div.innerHTML = `
+        <img src="media/${item.cover}" alt="تصویر">
+        <p>${item.title}</p>
+      `;
+      container.appendChild(div);
+    });
+  })
+  .catch(err => console.error("خطا در بارگذاری دیتا:", err));
+
+  </script>
+    
+<!-- پایان خانه -->
+  </div>
+  <!-- آرشیو لایو ها -->
+  <div class="achive">
+    آرشیو لایو ها
+  </div>
+  <!-- تاریخ تولد -->
+  <div class="calender">
+    تاریخ تولد
+  </div>
+  <script>
+    const menuItems = document.querySelectorAll('.zmenu');
+    const sections = {
+      0: document.querySelector('.home'),
+      1: document.querySelector('.achive'),
+      2: document.querySelector('.calender')
+    };
+
+    // تابع برای نمایش یک بخش و تنظیم کلاس فعال
+    function activateSection(index) {
+      // مخفی کردن تمام بخش‌ها
+      Object.values(sections).forEach(section => {
+        section.style.display = 'none';
+      });
+
+      // حذف کلاس zmenu1 از همه دکمه‌ها
+      menuItems.forEach(item => item.classList.remove('zmenu1'));
+
+      // نمایش بخش انتخاب‌شده و افزودن کلاس فعال
+      sections[index].style.display = 'block';
+      menuItems[index].classList.add('zmenu1');
+    }
+
+    // اتصال رویداد کلیک به هر منو
+    menuItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        activateSection(index);
+      });
+    });
+
+    // نمایش پیش‌فرض: خانه
+    window.addEventListener('DOMContentLoaded', () => {
+      activateSection(0); // یعنی خانه
+    });
+  </script>
+
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

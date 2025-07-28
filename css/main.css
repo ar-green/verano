@@ -148,13 +148,14 @@ input:focus {
 }
 /* هدر لپتاپ */
 .header {
-  width: 100%;
+  width: 90%;
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   /* background-color: var(--green-l); */
   direction: rtl;
+  z-index: 9999999999;
 }
 .logo {
   width: 15%;
@@ -227,4 +228,112 @@ input:focus {
 a {
   color: none;
   text-decoration: none;
+}
+.home,
+.achive,
+.calender {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  overflow: scroll;
+  padding-top: 100px;
+}
+/* بنر */
+.box {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  scrollbar-width: thin; /* برای فایرفاکس */
+  scrollbar-color: var(--green-l) var(--green-d2);
+}
+.end::-webkit-scrollbar {
+  width: 10px;
+}
+
+.end::-webkit-scrollbar-track {
+  background: var(--green-d2);
+  border-radius: 8px;
+}
+
+.end::-webkit-scrollbar-thumb {
+  background-color: var(--green-l);
+  border-radius: 8px;
+  border: 2px solid var(--green-d2);
+}
+
+/* حالت هاور روی اسکرولبار */
+.end::-webkit-scrollbar-thumb:hover {
+  background-color: var(--green);
+}
+.banner {
+  width: 60%;
+  height: 450px;
+  background-image: url(../media/bnr.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top; /* جایگاه تصویر */
+  border-radius: 20px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.border {
+  width: 30%;
+  height: 450px;
+  background-color: var(--green-d2);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+}
+.t {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green-l);
+  font-size: 20px;
+  border-bottom: 1px solid var(--white);
+}
+.end {
+  width: 100%;
+  height: 400px;
+
+  overflow: scroll;
+  overflow-y: auto; /* اسکرول عمودی فعال میشه */
+}
+
+.ending {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  direction: rtl;
+  padding: 5px;
+  img {
+    height: 90%;
+    aspect-ratio: 1.5/1;
+    object-fit: cover; /* عکس هم اندازه دیو میشه، بدون به هم خوردن */
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  p {
+    color: var(--white);
+  }
+}
+.ending:not(:last-child) {
+  border-bottom: 1px solid var(--green-l);
 }

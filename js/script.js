@@ -1,5 +1,5 @@
 // نام‌های کاربری و رمز عبور معتبر
-const validUsernames = ["arnoosh", "mahdis", "mahdisa", "liosa", "dorsa"];
+const validUsernames = ["liosa", "dorsa", "mahdis", "", "arnoosh"];
 const validPassword = "bts";
 
 // تولید کپچا ۵ رقمی رندوم

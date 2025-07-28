@@ -36,11 +36,7 @@
   zmenu {
     font-size: 13px;
   }
-  .zmenu1 {
-    background-color: var(--green-d2);
-    border-bottom: 2px solid var(--white);
-    border-radius: 0;
-  }
+
   .logo {
     width: 20%;
     display: flex;
@@ -58,5 +54,22 @@
   }
   .exit {
     width: 20%;
+  }
+  /* بنر */
+  .box {
+    width: 90%;
+    margin-top: 0;
+    gap: 15px;
+  }
+  .banner {
+    width: 50%;
+    height: 300px;
+  }
+  .border {
+    width: 45%;
+    height: 300px;
+  }
+  .end {
+    height: 250px;
   }
 }
