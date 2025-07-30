@@ -33,6 +33,7 @@
     background-color: var(--cream-warm);
     justify-content: center;
     gap: 10px;
+    user-select: none;
     .z-menu {
       font-size: 18px;
       width: 60px;
