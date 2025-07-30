@@ -10,9 +10,9 @@
 @media (min-width: 768px) and (max-width: 1023px) {
   body {
     background: url(../media/bg-t.png);
-    background-position: top;
+    background-position: initial;
     background-size: cover;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     position: fixed;
   }
   .logo {

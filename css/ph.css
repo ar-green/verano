@@ -12,7 +12,7 @@
     background: url(../media/Copilot_20250730_144226.png);
     background-position: top;
     background-size: cover;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
   }
   .header {
     justify-content: space-between;
@@ -30,7 +30,7 @@
     position: fixed;
     bottom: 0;
     right: 0;
-    background-color: var(--beige-light);
+    background-color: var(--cream-warm);
     justify-content: center;
     gap: 10px;
     .z-menu {
