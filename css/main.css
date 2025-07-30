@@ -1,339 +1,199 @@
 @font-face {
   font-family: iransansmedium;
-  src: url(../media/font/medium.woff);
+  src: url(../media/font/golz.ttf);
 }
-@font-face {
-  font-family: iransansnum;
-  src: url(../media/font/mediumnum.ttf);
-}
+
 :root {
-  --green: #055432;
-  --green-l: #a9d89b;
-  --green-d1: hsl(149, 85%, 13%);
-  --green-d2: #001c0d;
-  --white: #efffdb;
-}
-body {
-  background-color: var(--green-d1);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  transition: 300ms all linear;
+  /* پالت 1: کلاسیک گرم */
+  --brown-dark: #4b2e05;
+  --brown-dark-mat: rgba(75, 46, 5, 0.7);
+  --brown-medium: #7b4f24;
+  --cream-warm: #c9a66b;
+  --beige-light: #e6d4b8;
+  --ivory-white: #f6f1e7;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: iransansmedium;
-  font-family: iransansnum;
+  font-size: 20px;
+  color: var(--cream-warm);
 }
-/* صفحه ورود */
-.body {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+a {
+  text-decoration: none;
+  color: none;
 }
-.log {
-  width: 70%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.log-logo {
-  width: auto;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  img {
-    width: 300px;
-  }
-}
+/* فرم ورود */
 .form {
-  width: 500px;
-  height: 400px;
-  background-color: var(--green-d2);
-  border-radius: 20px;
+  width: 379px;
+  height: auto;
+  aspect-ratio: 1/1;
+  background-color: var(--brown-dark-mat);
+  border-radius: 15px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
   gap: 10px;
   direction: rtl;
 }
-.tv {
-  width: 90%;
+
+.log {
+  width: 100%;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: start;
-  gap: 10px;
-  color: white;
-  margin-bottom: 20px;
-  cursor: default;
+  padding: 20px;
+  user-select: none;
   .a {
-    width: 15%;
-    height: auto;
-    color: white;
+    border-left: 1px solid var(--cream-warm);
+    width: 50px;
     display: flex;
     align-items: center;
     justify-content: start;
-    font-size: 20px;
-    border-left: 1px solid var(--white);
+    font-size: 22px;
+  }
+  .b {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 17px;
+    padding-right: 5px;
   }
 }
 .user {
   width: 90%;
   height: 40px;
-  background-color: var(--green-d1);
-  border-radius: 10px;
+  background-color: var(--cream-warm);
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: start;
   gap: 5px;
-  padding: 10px;
+  padding-right: 10px;
   i {
-    color: var(--white);
+    font-size: medium;
+    color: var(--brown-medium);
   }
   input {
     width: 90%;
-    height: auto;
-    padding: 5px;
-    color: none;
-    background-color: var(--green-d1);
+    height: 100%;
+    background-color: var(--cream-warm);
+    color: var(--brown-medium);
     border: none;
-    color: var(--white);
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+  }
+  input:focus {
+    outline: none;
+    box-shadow: none;
   }
   button {
     width: 100%;
     height: 100%;
-    color: var(--green-d2);
-    background-color: var(--green-l);
+    background-color: var(--beige-light);
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
+    color: var(--brown-medium);
   }
 }
-input:focus {
-  outline: none;
-}
-.boxed {
+.capcha {
   width: 90%;
-  height: 50px;
-  background-color: var(--green-d1);
-  border-radius: 10px;
+  height: 70px;
+  background-color: var(--cream-warm);
+  border-radius: 5px;
   display: flex;
   align-items: center;
-  justify-content: start;
-  padding-right: 10px;
-  color: var(--white);
+  justify-content: center;
   user-select: none;
+  padding: 15px;
   p {
-    margin: auto;
+    color: var(--brown-medium);
+    margin: 50% auto;
   }
 }
-.b {
+.reset {
   width: 25px;
   height: 25px;
-  background-color: var(--white);
+  aspect-ratio: 1/1;
+  background-color: var(--brown-medium);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--green-d2);
   cursor: pointer;
+  i {
+    font-size: medium;
+  }
 }
 /* هدر لپتاپ */
 .header {
-  width: 90%;
+  width: 100%;
   height: 80px;
+  background-color: var(--beige-light);
+  position: fixed;
+  right: 0;
+  top: 0;
+  direction: rtl;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  /* background-color: var(--green-l); */
-  direction: rtl;
-  z-index: 9999999999;
 }
 .logo {
-  width: 15%;
-  height: 60%;
+  width: 20%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: start;
-  a {
-    width: 100%;
-    height: 100%;
-  }
   img {
-    width: auto;
-    height: 100%;
+    width: 170px;
   }
 }
 .menu {
-  width: 30%;
-  height: 60%;
-  background-color: var(--green-d2);
-  border-radius: 10px;
+  width: 25%;
+  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-.zmenu {
-  width: auto;
-  height: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  color: var(--green-l);
-  cursor: pointer;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-.zmenu:hover {
-  color: var(--white);
-}
-.zmenu1 {
-  background-color: var(--green-d1);
-  border-radius: 10px;
-  color: var(--white);
+  justify-content: space-between;
+  .z-menu {
+    width: 100px;
+    height: 100%;
+    color: var(--brown-medium);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all linear 300ms;
+    font-size: 25px;
+  }
+  .z-menu:hover{
+    color: var(--brown-dark);
+  }
+  .z-menu1{
+    color: var(--brown-dark);
+  }
 }
 .exit {
-  width: 15%;
+  width: 20%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: end;
 }
-.c {
-  width: 50px;
-  height: 50px;
-  background-color: var(--green-d2);
-  border-radius: 50%;
+.exit1 {
+  width: 45px;
+  height: auto;
+  aspect-ratio: 1/1;
+  border: 2px solid var(--brown-medium);
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   i {
-    color: var(--green-l);
-    font-size: large;
+    color: var(--brown-medium);
   }
-}
-a {
-  color: none;
-  text-decoration: none;
-}
-.home,
-.achive,
-.calender {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  overflow: scroll;
-  padding-top: 100px;
-}
-/* بنر */
-.box {
-  width: 80%;
-  height: auto;
-  margin: 0 auto;
-  margin-top: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  scrollbar-width: thin; /* برای فایرفاکس */
-  scrollbar-color: var(--green-l) var(--green-d2);
-}
-.end::-webkit-scrollbar {
-  width: 10px;
-}
-
-.end::-webkit-scrollbar-track {
-  background: var(--green-d2);
-  border-radius: 8px;
-}
-
-.end::-webkit-scrollbar-thumb {
-  background-color: var(--green-l);
-  border-radius: 8px;
-  border: 2px solid var(--green-d2);
-}
-
-/* حالت هاور روی اسکرولبار */
-.end::-webkit-scrollbar-thumb:hover {
-  background-color: var(--green);
-}
-.banner {
-  width: 60%;
-  height: 450px;
-  background-image: url(../media/bnr.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top; /* جایگاه تصویر */
-  border-radius: 20px;
-  display: flex;
-  align-items: end;
-  justify-content: center;
-}
-
-.border {
-  width: 30%;
-  height: 450px;
-  background-color: var(--green-d2);
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  flex-direction: column;
-}
-.t {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--green-l);
-  font-size: 20px;
-  border-bottom: 1px solid var(--white);
-}
-.end {
-  width: 100%;
-  height: 400px;
-
-  overflow: scroll;
-  overflow-y: auto; /* اسکرول عمودی فعال میشه */
-}
-
-.ending {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  gap: 10px;
-  direction: rtl;
-  padding: 5px;
-  img {
-    height: 90%;
-    aspect-ratio: 1.5/1;
-    object-fit: cover; /* عکس هم اندازه دیو میشه، بدون به هم خوردن */
-    border-radius: 5px;
-    color: var(--white);
-    font-size: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  p {
-    color: var(--white);
-  }
-}
-.ending:not(:last-child) {
-  border-bottom: 1px solid var(--green-l);
 }

@@ -12,48 +12,110 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
-<body>
+<body style="display: flex; align-items: center; justify-content: center; height: 100vh; width: 100%;">
   <!-- ورود -->
-  <div class="body">
-    <div class="log">
-      <div class="log-logo">
-        <img src="./media/logo.png" alt="">
-      </div>
-      <div class="form">
-        <div class="tv">
-          <p class="a">ورود</p>
-          <p id="infoMessage">نام کاربری و رمز عبور را وارد کنید</p>
-        </div>
-
-        <div class="user">
-          <i class="fa-solid fa-user"></i>
-          <input type="text" id="username" placeholder="نام کاربری" />
-        </div>
-
-        <div class="user">
-          <i class="fa-solid fa-lock"></i>
-          <input type="password" id="password" placeholder="رمز عبور" />
-        </div>
-
-        <div class="boxed">
-          <div class="b" id="refreshCaptcha" title="رفرش کپچا">
-            <i class="fa-solid fa-rotate"></i>
-          </div>
-          <p id="captchaText">12345</p>
-        </div>
-
-        <div class="user">
-          <i class="fa-solid fa-shield-halved"></i>
-          <input type="text" id="captchaInput" placeholder="کد کپچا" />
-        </div>
-
-        <div class="user" style="padding: 0;">
-          <button id="loginBtn">ورود</button>
-        </div>
-      </div>
-    </div>
+  <div class="form">
+  <div class="log">
+    <p class="a">ورود</p>
+    <p class="b">نام کاربری و رمز عبور را وارد کنید...</p>
   </div>
-  <script src="./js/script.js"></script>
+  <div class="user">
+    <i class="fa-solid fa-user"></i>
+    <input type="text" placeholder="نام کاربری" />
+  </div>
+  <div class="user">
+    <i class="fa-solid fa-lock"></i>
+    <input type="password" placeholder="رمز عبور" />
+  </div>
+  <div class="capcha">
+    <div class="reset" style="cursor:pointer;"><i class="fa-solid fa-rotate"></i></div>
+    <p></p>
+  </div>
+  <div class="user">
+    <i class="fa-solid fa-shield-halved"></i>
+    <input type="text" placeholder="کد کپچا" />
+  </div>
+  <div class="user" style="padding: 0; margin: 0;">
+    <button>ورود</button>
+  </div>
+</div>
+
+<script>
+  const form = document.querySelector('.form');
+  const usernameInput = form.querySelector('input[placeholder="نام کاربری"]');
+  const passwordInput = form.querySelector('input[placeholder="رمز عبور"]');
+  const captchaInput = form.querySelector('input[placeholder="کد کپچا"]');
+  const captchaDisplay = form.querySelector('.capcha p');
+  const resetCaptchaBtn = form.querySelector('.capcha .reset');
+  const messageP = form.querySelector('.log .b');
+
+  // لیست نام‌های کاربری مجاز
+  const validUsernames = ['mahdia', 'arnoosh', 'dorsa'];
+  const validPassword = 'bts';
+
+  // تابع ساخت کپچا عددی رندوم ۵ رقمی
+  function generateCaptcha() {
+    return Math.floor(10000 + Math.random() * 90000).toString();
+  }
+
+  // بارگذاری کپچا در ابتدا
+  let currentCaptcha = generateCaptcha();
+  captchaDisplay.textContent = currentCaptcha;
+
+  // ریست کپچا با کلیک روی آیکون رفرش
+  resetCaptchaBtn.addEventListener('click', () => {
+    currentCaptcha = generateCaptcha();
+    captchaDisplay.textContent = currentCaptcha;
+  });
+
+  form.querySelector('button').addEventListener('click', e => {
+    e.preventDefault();
+
+    const username = usernameInput.value.trim().toLowerCase();
+    const password = passwordInput.value.trim();
+    const captchaValue = captchaInput.value.trim();
+
+    if (!username) {
+      messageP.textContent = 'لطفا نام کاربری را وارد کنید.';
+      usernameInput.focus();
+      return;
+    }
+    if (!validUsernames.includes(username)) {
+      messageP.textContent = 'نام کاربری اشتباه است.';
+      usernameInput.focus();
+      return;
+    }
+    if (!password) {
+      messageP.textContent = 'لطفا رمز عبور را وارد کنید.';
+      passwordInput.focus();
+      return;
+    }
+    if (password !== validPassword) {
+      messageP.textContent = 'رمز عبور اشتباه است.';
+      passwordInput.focus();
+      return;
+    }
+    if (!captchaValue) {
+      messageP.textContent = 'لطفا کد کپچا را وارد کنید.';
+      captchaInput.focus();
+      return;
+    }
+    if (captchaValue !== currentCaptcha) {
+      messageP.textContent = 'کد کپچا اشتباه است.';
+      captchaInput.focus();
+      return;
+    }
+
+    // اگر همه چی درست بود پیام موفقیت می‌ذاریم
+    messageP.textContent = 'ورود موفقیت‌آمیز بود، در حال انتقال...';
+
+    // بعد از کمی تأخیر، ریدایرکت به صفحه verano.html
+    setTimeout(() => {
+      window.location.href = 'verano.html';
+    }, 1500);
+  });
+</script>
+
 </body>
 
 </html>

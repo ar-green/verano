@@ -1,14 +1,17 @@
 :root {
-  --green: #055432;
-  --green-l: #a9d89b;
-  --green-d1: hsl(149, 85%, 13%);
-  --green-d2: #001c0d;
-  --white: #efffdb;
+  /* پالت 1: کلاسیک گرم */
+  --brown-dark: #4b2e05;
+  --brown-dark-mat: rgba(75, 46, 5, 0.7);
+  --brown-medium: #7b4f24;
+  --cream-warm: #c9a66b;
+  --beige-light: #e6d4b8;
+  --ivory-white: #f6f1e7;
 }
 @media (min-width: 1024px) {
-  .log-logo {
-    img {
-      width: 350px;
-    }
+  body {
+    background: url(../media/bg-l.png);
+    background-position: top;
+    background-size: initial;
+    background-repeat: repeat;
   }
 }

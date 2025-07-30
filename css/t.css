@@ -1,75 +1,36 @@
 :root {
-  --green: #055432;
-  --green-l: #a9d89b;
-  --green-d1: hsl(149, 85%, 13%);
-  --green-d2: #001c0d;
-  --white: #efffdb;
+  /* پالت 1: کلاسیک گرم */
+  --brown-dark: #4b2e05;
+  --brown-dark-mat: rgba(75, 46, 5, 0.7);
+  --brown-medium: #7b4f24;
+  --cream-warm: #c9a66b;
+  --beige-light: #e6d4b8;
+  --ivory-white: #f6f1e7;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  .log {
-    width: 85%;
+  body {
+    background: url(../media/bg-t.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: repeat;
+    position: fixed;
   }
-  .log-logo {
+  .logo {
     img {
-      width: 280px;
+      width: 120px;
     }
-  }
-  .form {
-    width: 400px;
-  }
-  /* هدر تبلت */
-  .header {
-    width: 90%;
-    justify-content: space-between;
   }
   .menu {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    border-radius: 0;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-  }
-  zmenu {
-    font-size: 13px;
-  }
-
-  .logo {
-    width: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    img {
-      width: 100%;
-      height: auto;
+    width: 30%;
+    .z-menu {
+      font-size: 18px;
+      width: 50px;
     }
   }
-  .exit {
-    width: 20%;
-  }
-  /* بنر */
-  .box {
-    width: 90%;
-    margin-top: 0;
-    gap: 15px;
-  }
-  .banner {
-    width: 50%;
-    height: 300px;
-  }
-  .border {
-    width: 45%;
-    height: 300px;
-  }
-  .end {
-    height: 250px;
+  .exit1 {
+    width: 35px;
+    i {
+      font-size: small;
+    }
   }
 }
