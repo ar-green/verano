@@ -73,6 +73,7 @@ a {
   justify-content: start;
   gap: 5px;
   padding-right: 10px;
+  color: var(--cream-warm);
   i {
     font-size: medium;
     color: var(--brown-medium);
