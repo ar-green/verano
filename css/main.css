@@ -171,10 +171,10 @@ a {
     transition: all linear 300ms;
     font-size: 25px;
   }
-  .z-menu:hover{
+  .z-menu:hover {
     color: var(--brown-dark);
   }
-  .z-menu1{
+  .z-menu1 {
     color: var(--brown-dark);
   }
 }
