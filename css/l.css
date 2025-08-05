@@ -8,10 +8,15 @@
   --ivory-white: #f6f1e7;
 }
 @media (min-width: 1024px) {
-  body {
-    background: url(../media/bg-l.png);
-    background-position: top;
-    background-size: initial;
-    background-repeat: repeat;
+.bg{
+  width: 25%;
+
+}
+/* عنوان */
+.title{
+  font-size: 25px;
+}
+  .live-box{
+    height: 80px;
   }
 }

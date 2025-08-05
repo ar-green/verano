@@ -8,41 +8,29 @@
   --ivory-white: #f6f1e7;
 }
 @media (max-width: 767px) {
-  body {
-    background: url(../media/Copilot_20250730_144226.png);
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
+  .bg {
+    width: 55%;
   }
+  /* هدر */
   .header {
-    justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .logo {
-    img {
-      width: 120px;
-    }
-  }
-  .menu {
-    width: 100%;
     height: 60px;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    background-color: var(--cream-warm);
-    justify-content: center;
-    gap: 10px;
-    user-select: none;
-    .z-menu {
-      font-size: 18px;
-      width: 60px;
+  }
+  .exit {
+    i {
+      font-size: medium;
+      color: var(--brown-medium);
     }
   }
-  .exit1 {
-    width: 35px;
-    i {
-      font-size: small;
+  .live-box{
+    height: 60px;
+  }
+  .text{
+    width: 60%;
+    font-size: 15px;
+  }
+  .img{
+    img{
+    font-size: 10px;
     }
   }
 }
