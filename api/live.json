@@ -1,24 +1,7 @@
 [
-  { "cover": "bnr1.png", "title": "لایو هفت نفره" },
-  { "cover": "bnr1.png", "title": "لایو هفت نفره" },
-  { "cover": "bnr1.png", "title": "لایو هفت نفره" },
-  { "cover": "bnr1.png", "title": "لایو هفت نفره" },
-  { "cover": "bnr2.png", "title": "فان کم جیمین" },
-  { "cover": "bnr3.png", "title": "کنسرت ۲۰۲۴" },
-  { "cover": "bnr4.png", "title": "اجرای ویژه" },
-  { "cover": "bnr5.png", "title": "مصاحبه ویژه" },
-  { "cover": "bnr6.png", "title": "ریمیکس جین" },
-  { "cover": "bnr7.png", "title": "اجرای جِی-هوپ" },
-  { "cover": "bnr8.png", "title": "تمرین گروهی" },
-  { "cover": "bnr9.png", "title": "بی‌تی‌اس در یوتیوب" },
-  { "cover": "bnr10.png", "title": "پشت صحنه موزیک‌ویدئو" },
-  { "cover": "bnr10.png", "title": "پشت صحنه موزیک‌ویدئو" },
-  { "cover": "bnr10.png", "title": "پشت صحنه موزیک‌ویدئو" },
-  { "cover": "bnr10.png", "title": "پشت صحنه موزیک‌ویدئو" },
-  { "cover": "bnr10.png", "title": "پشت صحنه موزیک‌ویدئو" },
-  { "cover": "bnr10.png", "title": "پشت صحنه موزیک‌ویدئو" },
-  { "cover": "bnr10.png", "title": "پشت صحنه موزیک‌ویدئو" },
-  { "cover": "bnr10.png", "title": "پشت صحنه موزیک‌ویدئو" },
-  { "cover": "bnr10.png", "title": "پشت صحنه موزیک‌ویدئو" },
-  { "cover": "bnr11.png", "title": "خبر فوری" }
+  {
+    "cover": "https://i.pinimg.com/736x/c3/6b/1b/c36b1b210ad22f469c48862d86a80842.jpg",
+    "title": "آهنگ who جیمین در اسپاتیفای به دو میلیاد استریم رسید"
+  },
+  { "cover": "bnr1.png", "title": "لایو هفت نفره" }
 ]
